@@ -1,0 +1,15 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "reverence": {
+      "type": "local",
+      "command": [
+        "uvx",
+        "--from",
+        "git+https://github.com/0x3k3h/reverence-mcp.git",
+        "reverence-mcp"
+      ],
+      "enabled": true
+    }
+  }
+}
