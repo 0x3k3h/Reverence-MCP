@@ -2,7 +2,7 @@
 
 Reverence is a stdio MCP server.
 
-## Recommended — zero-clone via `uvx`
+## Recommended - zero-clone via `uvx`
 
 Requires [uv](https://docs.astral.sh/uv/) on your PATH. No clone, no venv to
 manage; the same command works on Windows, macOS, and Linux.
@@ -10,7 +10,7 @@ manage; the same command works on Windows, macOS, and Linux.
 ### Via the CLI
 
 ```bash
-claude mcp add reverence -s user -- uvx --from git+https://github.com/0x3k3h/reverence-mcp.git reverence-mcp
+claude mcp add reverence -s user -- uvx --from git+https://github.com/0x3k3h/Reverence-MCP.git reverence-mcp
 ```
 
 `-s user` makes it available in all your projects. Use `-s project` to write a
@@ -19,7 +19,7 @@ this project.
 
 ### Via `.mcp.json` (project-scoped, shareable)
 
-Create `.mcp.json` in your project root — this is the ready-to-copy
+Create `.mcp.json` in your project root - this is the ready-to-copy
 [`examples/claude-code.mcp.json`](../examples/claude-code.mcp.json):
 
 ```json
@@ -29,7 +29,7 @@ Create `.mcp.json` in your project root — this is the ready-to-copy
       "command": "uvx",
       "args": [
         "--from",
-        "git+https://github.com/0x3k3h/reverence-mcp.git",
+        "git+https://github.com/0x3k3h/Reverence-MCP.git",
         "reverence-mcp"
       ]
     }
@@ -42,7 +42,7 @@ Create `.mcp.json` in your project root — this is the ready-to-copy
 Replace the `args` with:
 
 ```json
-"args": ["--from", "reverence-mcp[extras] @ git+https://github.com/0x3k3h/reverence-mcp.git", "reverence-mcp"]
+"args": ["--from", "reverence-mcp[extras] @ git+https://github.com/0x3k3h/Reverence-MCP.git", "reverence-mcp"]
 ```
 
 ### Enabling Ghidra decompilation
@@ -53,15 +53,15 @@ Add an `env` block to the server entry:
 "env": { "GHIDRA_HOME": "C:\\tools\\ghidra_11.1" }
 ```
 
-## Alternative — local checkout
+## Alternative - local checkout
 
 After `git clone` + `uv sync`, point straight at the generated console script:
 
 ```bash
-claude mcp add reverence -- C:\path\to\reverence-mcp\.venv\Scripts\reverence-mcp.exe
+claude mcp add reverence -- C:\path\to\Reverence-MCP\.venv\Scripts\reverence-mcp.exe
 ```
 
-On macOS/Linux use `/path/to/reverence-mcp/.venv/bin/reverence-mcp`.
+On macOS/Linux use `/path/to/Reverence-MCP/.venv/bin/reverence-mcp`.
 
 ## Verify
 
@@ -69,11 +69,11 @@ On macOS/Linux use `/path/to/reverence-mcp/.venv/bin/reverence-mcp`.
 claude mcp list
 ```
 
-You should see `reverence: … - √ Connected`. Then, in a session:
+You should see `reverence: ... - Connected`. Then, in a session:
 
 > Use reverence to analyze C:\Windows\System32\notepad.exe
 
 The `analyze` / `pe_info` / `disassemble_entrypoint` tools should fire.
 
-> **Note:** a newly added server is picked up by *new* sessions — a running
+> **Note:** a newly added server is picked up by *new* sessions - a running
 > session won't see its tools until it reloads MCP servers.

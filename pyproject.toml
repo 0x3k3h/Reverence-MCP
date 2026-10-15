@@ -1,7 +1,7 @@
 [project]
 name = "reverence-mcp"
 version = "0.1.0"
-description = "Reverence — an MCP server for static reverse engineering of binaries, executables, DLLs, and web apps."
+description = "Reverence - an MCP server for static reverse engineering of binaries, executables, DLLs, and web apps."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
@@ -31,9 +31,9 @@ extras = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/0x3k3h/reverence-mcp"
-Repository = "https://github.com/0x3k3h/reverence-mcp"
-Issues = "https://github.com/0x3k3h/reverence-mcp/issues"
+Homepage = "https://github.com/0x3k3h/Reverence-MCP"
+Repository = "https://github.com/0x3k3h/Reverence-MCP"
+Issues = "https://github.com/0x3k3h/Reverence-MCP/issues"
 
 [project.scripts]
 reverence-mcp = "reverence_mcp.server:main"

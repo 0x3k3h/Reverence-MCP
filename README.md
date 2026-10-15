@@ -1,4 +1,4 @@
-# Reverence — Reverse-Engineering MCP Server
+# Reverence - Reverse-Engineering MCP Server
 
 An [MCP](https://modelcontextprotocol.io) server that gives Claude Code,
 OpenCode, and any other MCP client a toolbox for **static reverse engineering**
@@ -34,26 +34,26 @@ of binaries, executables, DLLs, shared objects, and web-app code.
 
 Requires Python 3.10+ and [uv](https://docs.astral.sh/uv/).
 
-### Zero-clone (recommended) — run straight from GitHub
+### Zero-clone (recommended) - run straight from GitHub
 
 No clone, no manual venv. Point your MCP client at:
 
 ```
-uvx --from git+https://github.com/0x3k3h/reverence-mcp.git reverence-mcp
+uvx --from git+https://github.com/0x3k3h/Reverence-MCP.git reverence-mcp
 ```
 
-`uvx` fetches, builds, caches, and runs the server on demand — same command on
+`uvx` fetches, builds, caches, and runs the server on demand - same command on
 Windows, macOS, and Linux. To include the optional engines:
 
 ```
-uvx --from "reverence-mcp[extras] @ git+https://github.com/0x3k3h/reverence-mcp.git" reverence-mcp
+uvx --from "reverence-mcp[extras] @ git+https://github.com/0x3k3h/Reverence-MCP.git" reverence-mcp
 ```
 
 ### Local checkout (for development)
 
 ```bash
-git clone https://github.com/0x3k3h/reverence-mcp.git
-cd reverence-mcp
+git clone https://github.com/0x3k3h/Reverence-MCP.git
+cd Reverence-MCP
 uv sync            # add --extra extras for r2pipe + yara-python
 ```
 
@@ -67,8 +67,8 @@ pip install -e ".[extras]"
 
 ### Optional external tools
 
-- **radare2** — install the `r2` binary from <https://github.com/radareorg/radare2>; `r2pipe` (the Python bridge) comes with the `extras` group.
-- **Ghidra** — install from <https://ghidra-sre.org> and set `GHIDRA_HOME` to the install directory (the one containing `support/analyzeHeadless`).
+- **radare2** - install the `r2` binary from <https://github.com/radareorg/radare2>; `r2pipe` (the Python bridge) comes with the `extras` group.
+- **Ghidra** - install from <https://ghidra-sre.org> and set `GHIDRA_HOME` to the install directory (the one containing `support/analyzeHeadless`).
 
 Run `capabilities` any time to see what's active.
 
@@ -77,18 +77,18 @@ Run `capabilities` any time to see what's active.
 The server speaks MCP over stdio. The zero-clone launch command is:
 
 ```
-uvx --from git+https://github.com/0x3k3h/reverence-mcp.git reverence-mcp
+uvx --from git+https://github.com/0x3k3h/Reverence-MCP.git reverence-mcp
 ```
 
 Copy-paste client config:
 
-- **OpenCode** — [`docs/opencode.md`](docs/opencode.md) · ready file: [`examples/opencode.json`](examples/opencode.json)
-- **Claude Code** — [`docs/claude-code.md`](docs/claude-code.md) · ready file: [`examples/claude-code.mcp.json`](examples/claude-code.mcp.json)
+- **OpenCode** - [`docs/opencode.md`](docs/opencode.md) | ready file: [`examples/opencode.json`](examples/opencode.json)
+- **Claude Code** - [`docs/claude-code.md`](docs/claude-code.md) | ready file: [`examples/claude-code.mcp.json`](examples/claude-code.mcp.json)
 
 Quickest path, Claude Code:
 
 ```bash
-claude mcp add reverence -s user -- uvx --from git+https://github.com/0x3k3h/reverence-mcp.git reverence-mcp
+claude mcp add reverence -s user -- uvx --from git+https://github.com/0x3k3h/Reverence-MCP.git reverence-mcp
 ```
 
 ## Quick start
@@ -106,7 +106,7 @@ deobfuscate_javascript  path=C:\path\to\bundle.min.js
 Reverence is for authorized work: analyzing your own software, malware analysis
 and defensive research, CTFs, interoperability, and security review of code you
 have permission to examine. Point it at files you're allowed to analyze, and
-handle real-world malware samples in an isolated environment — Reverence reads
+handle real-world malware samples in an isolated environment - Reverence reads
 them statically but anything *else* you do with them is on you.
 
 ## License

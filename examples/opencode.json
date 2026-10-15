@@ -6,7 +6,7 @@
       "command": [
         "uvx",
         "--from",
-        "git+https://github.com/0x3k3h/reverence-mcp.git",
+        "git+https://github.com/0x3k3h/Reverence-MCP.git",
         "reverence-mcp"
       ],
       "enabled": true
